@@ -1,0 +1,42 @@
+<!doctype>
+<html>
+<head>
+    <base href="/">
+    <title>Angular 2 Boilerplate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="/libs/es6-shim/es6-shim.min.js"></script>
+    <script src="/libs/systemjs/dist/system-polyfills.js"></script>
+    <script src="/libs/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+    <script src="/libs/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="/libs/systemjs/dist/system.src.js"></script>
+    <script src="/libs/rxjs/bundles/Rx.js"></script>
+    <script src="/libs/angular2/bundles/angular2.dev.js"></script>
+    <script src="/libs/angular2/bundles/router.dev.js"></script>
+    <script src="/libs/angular2/bundles/http.dev.js"></script>
+    <!--<script src="https://code.angularjs.org/2.0.0-beta.14/http.dev.js"></script>-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/src/css/common.css">
+
+    <base href="/">
+</head>
+<body>
+
+<my-app>Loading...</my-app>
+
+<script>
+    System.config({
+        packages: {
+            app: {
+                format: 'register',
+                defaultExtension: 'js'
+            }
+        }
+    });
+    System.import('app/boot')
+            .then(null, console.error.bind(console));
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+    <div class="input-holder">
+        <label for="first_name">First name</label>
+        <input id="first_name" name="first_name" type="text"
+               ngControl="first_name"
+               [(ngModel)]="user.first_name"
+               required>
+        <span class="error" *ngIf="submitted">Please enter First Name</span>
+    </div>
+    <div class="input-holder">
+        <label for="last_name">Last name</label>
+        <input id="last_name" name="last_name" type="text"
+               ngControl="last_name"
+               [(ngModel)]="user.last_name"
+               required>
+        <span class="error" *ngIf="submitted">Please enter Last Name</span>
+    </div>
+
+    <button type="submit">Save</button>
+</form>

@@ -1,0 +1,103 @@
+/*
+button {
+  background: #90f;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  color: #000;
+  cursor: pointer;
+  padding: 10px;
+  min-width: 100px;
+  text-transform: uppercase;
+
+  -webkit-transition: background 0.5s, color 0.5s, box-shadow 0.5s;
+  -moz-transition: background 0.5s, color 0.5s, box-shadow 0.5s;
+  -ms-transition: background 0.5s, color 0.5s, box-shadow 0.5s;
+  -o-transition: background 0.5s, color 0.5s, box-shadow 0.5s;
+  transition: background 0.5s, color 0.5s, box-shadow 0.5s;
+
+  &:hover {
+    background: transparent;
+    border-color: #90f;
+    color: #0cf;
+
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(153,0,255,1);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(153,0,255,1);
+    box-shadow: 0px 0px 10px 2px rgba(153,0,255,1);
+  }
+}
+*/
+.error {
+  -webkit-transition: opactiry 0.5s, height 0.5s;
+  -moz-transition: opactiry 0.5s, height 0.5s;
+  -ms-transition: opactiry 0.5s, height 0.5s;
+  -o-transition: opactiry 0.5s, height 0.5s;
+  display: block;
+  color: #ff0000;
+  height: 0;
+  opacity: 0;
+  padding-top: 10px;
+  transition: opactiry 0.5s, height 0.5s;
+  text-transform: lowercase;
+}
+
+input.ng-invalid, textarea.ng-invalid {
+  & + span.error {
+    opacity: 1;
+    height: auto;
+  }
+}
+
+.control-link {
+  cursor: pointer;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+/*
+form {
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  background: #000;
+  border-radius: 24px;
+  color: #fff;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: 40%;
+
+  label {
+    color: #00ccff;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  input,
+  textarea {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border: 1px solid #9900ff;
+    border-radius: 20px;
+    background: transparent;
+    color: #fff;
+    display: inline-block;
+    margin: 0 auto;
+    outline: none;
+    padding: 8px 10px 10px;
+    width: 50%;
+
+    &:focus {
+      -webkit-box-shadow: 0px 0px 10px 2px rgba(153,0,255,1);
+      -moz-box-shadow: 0px 0px 10px 2px rgba(153,0,255,1);
+      box-shadow: 0px 0px 10px 2px rgba(153,0,255,1);
+    }
+  }
+
+  .input-holder {
+    margin-bottom: 20px;
+  }
+}
+*/
