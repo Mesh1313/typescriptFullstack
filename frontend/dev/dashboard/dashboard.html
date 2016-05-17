@@ -1,5 +1,5 @@
 <section>
-    <form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+    <form (ngSubmit)="onSubmit(ngForm)" novalidate>
         <div class="input-holder">
             <label for="first_name">First name</label>
             <input id="first_name" name="first_name" type="text"
@@ -27,16 +27,18 @@
         <button type="submit">Create</button>
     </form>
 
-    <h1>Users</h1>
+    <section *ngIf="users.length">
+        <h1>Users</h1>
 
-    <ul>
-        <li *ngFor="#user of users">
-            {{user.first_name}}
-            {{user.last_name}}
-            {{user.email}}
-            <a [routerLink]="['UserEdit', { id: user._id }]">Edit</a>
-            <!--<span class="control-link" (click)="editUser(user)">Edit</span>-->
-            <span class="control-link" (click)="removeUser(user)">Remove</span>
-        </li>
-    </ul>
+        <ul>
+            <li *ngFor="#user of users">
+                {{user.first_name}}
+                {{user.last_name}}
+                {{user.email}}
+                <a [routerLink]="['UserEdit', { id: user._id }]">Edit</a>
+                <!--<span class="control-link" (click)="editUser(user)">Edit</span>-->
+                <span class="control-link" (click)="removeUser(user)">Remove</span>
+            </li>
+        </ul>
+    </section>
 </section>

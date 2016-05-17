@@ -10,7 +10,7 @@ import {Router, ROUTER_DIRECTIVES} from "angular2/router";
 })
 
 export class DashboardComponent implements OnInit {
-    users:User[];
+    users:User[] = [];
     user:User = <User>{};
 
     submitted:boolean = false;

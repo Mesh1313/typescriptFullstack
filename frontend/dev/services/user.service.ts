@@ -14,7 +14,6 @@ export class UserService {
     constructor(private _http:Http) {}
 
     getUser(id:string, callback:(user:User) => void) {
-
         this._http.get('/api/users/' + id)
             .map(res => res.json())
             .subscribe(

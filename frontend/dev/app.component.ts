@@ -24,7 +24,7 @@ import {UserEditComponent} from "./userEdit/user-edit.component";
 
 @RouteConfig([
     {
-        path: '/',
+        path: '/dashboard',
         name: 'Dashboard',
         component: DashboardComponent,
         useAsDefault: true
@@ -33,6 +33,10 @@ import {UserEditComponent} from "./userEdit/user-edit.component";
         path: '/user/edit/:id',
         name: 'UserEdit',
         component: UserEditComponent
+    },
+    {
+        path: '/',
+        redirectTo: ['Dashboard']
     }
 ])
 
